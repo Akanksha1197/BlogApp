@@ -18,7 +18,7 @@ const HandleChange=(e:ChangeEvent<HTMLInputElement>)=>{
     e.preventDefault();
     const {username ,email,password}=fromData;
     try {
-      const response = await fetch('http://localhost:5000/api/Signup',
+      const response = await fetch('https://vercel.com/akankshas-projects-76b3734f/blog-app/api/Signup',
       {
         method: 'POST',
         headers: {
