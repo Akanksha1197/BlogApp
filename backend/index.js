@@ -18,7 +18,9 @@ mongoose.connect('mongodb://127.0.0.1:27017/akki').then(()=>{
 
 })
 
-app.use(cors())
+app.use(cors({
+    origin:'https://vercel.com/akankshas-projects-76b3734f/blog-app-frontend'
+}))
 app.use(express.json())
 app.use('/api',userRouter)
 app.use('/api',blogRouter)
