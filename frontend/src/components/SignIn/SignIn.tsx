@@ -16,14 +16,12 @@ const HandleChange=(e:ChangeEvent<HTMLInputElement>)=>{
     e.preventDefault();
     const {email,password}=fromData;
     try {
-      const response = await fetch('https://vercel.com/akankshas-projects-76b3734f/blog-app/login',
+      const response = await fetch('https://vercel.com/akankshas-projects-76b3734f/blog-app/api/login',
       {
         method: 'POST',
                headers: {
-             "Access-Control-Allow-Headers" : "Content-Type",
-              "Access-Control-Allow-Origin": "*",
+            
             'Content-Type': 'application/json',
-             "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH"
         },
 
         body: JSON.stringify({
