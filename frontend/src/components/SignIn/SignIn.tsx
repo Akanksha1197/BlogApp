@@ -19,9 +19,13 @@ const HandleChange=(e:ChangeEvent<HTMLInputElement>)=>{
       const response = await fetch('https://vercel.com/akankshas-projects-76b3734f/blog-app/login',
       {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+               headers: {
+             "Access-Control-Allow-Headers" : "Content-Type",
+              "Access-Control-Allow-Origin": "*",
+            'Content-Type': 'application/json',
+             "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH"
         },
+
         body: JSON.stringify({
          
           email,
